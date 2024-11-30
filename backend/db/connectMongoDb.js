@@ -6,8 +6,8 @@ exports.connectMongoDb = async () => {
         await mongoose.connect(process.env.MONGO_DB_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true, // Ensures a stable connection pool
-            useCreateIndex: true, // For MongoDB index creation (if needed)
-            useFindAndModify: false, // Opt for modern findOneAndUpdate
+            
+            
         });
 
         console.log("Successfully connected to MongoDB");
