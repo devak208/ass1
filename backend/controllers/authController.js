@@ -105,9 +105,10 @@ exports.signup = async (req, res) => {
             username: newUser.username,
             email: newUser.email,
             profilePic: newUser.profilePic,
-            followers: user.followers,  // Adding followers
-            following: user.following,  // Adding following
+            followers: newUser.followers || [],  // Default empty array
+            following: newUser.following || [],  // Default empty array
         });
+        
     } catch (error) {
         console.error("Signup error:", error);
         res.status(500).json({ error: "Internal Server Error" });
