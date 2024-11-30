@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useAuthContext } from "../../context/authcontext";
 import useConversation from "../../zustand/useConversation";
 import { useGetMessages } from "../../hooks/useGetMessages";
