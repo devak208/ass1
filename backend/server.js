@@ -28,7 +28,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://192.168.147.246:3000",  // Replace with the exact frontend URL
+  origin:  process.env.CLIENT_URL ,  // Replace with the exact frontend URL
   credentials: true,
 }));
 
